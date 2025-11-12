@@ -151,7 +151,6 @@ class TodoPage extends StatelessWidget {
       case TodoFilter.completed:
         return todos.where((todo) => todo.isCompleted).toList();
       case TodoFilter.all:
-      default:
         return todos;
     }
   }
@@ -163,7 +162,6 @@ class TodoPage extends StatelessWidget {
       case TodoFilter.completed:
         return 'No completed todos';
       case TodoFilter.all:
-      default:
         return 'No todos yet';
     }
   }
