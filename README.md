@@ -93,6 +93,27 @@ Run tests with coverage:
 flutter test --coverage
 ```
 
+### Troubleshooting
+
+**Analyzer errors before code generation:**
+If you see errors like "TodoModelAdapter isn't defined" or "todo_model.g.dart hasn't been generated", this is expected. Simply run the code generation command:
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+**Watching for changes during development:**
+To automatically regenerate code when you make changes:
+```bash
+flutter pub run build_runner watch
+```
+
+**Clean and rebuild:**
+If you encounter issues with generated files:
+```bash
+flutter pub run build_runner clean
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
 ## Project Structure Details
 
 ### Core Layer
